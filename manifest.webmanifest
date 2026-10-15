@@ -1,0 +1,20 @@
+﻿{
+  "id": "./",
+  "name": "Shopee IMS Inventory Monitoring",
+  "short_name": "Shopee IMS",
+  "description": "Inventory monitoring for Shopee IMS.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f5f6f9",
+  "theme_color": "#ee4d2d",
+  "icons": [
+    {
+      "src": "./icons/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
