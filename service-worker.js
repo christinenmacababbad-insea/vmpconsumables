@@ -1,4 +1,4 @@
-﻿const CACHE_NAME = 'shopee-ims-shell-v1';
+﻿const CACHE_NAME = 'shopee-ims-shell-v2';
 const APP_SHELL = ['./', './data-directory.js', './manifest.webmanifest', './icons/app-icon.svg'];
 
 self.addEventListener('install', event => {
