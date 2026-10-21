@@ -1,5 +1,5 @@
-﻿const CACHE_NAME = 'shopee-ims-shell-v2';
-const APP_SHELL = ['./', './data-directory.js', './manifest.webmanifest', './icons/app-icon.svg'];
+﻿const CACHE_NAME = 'shopee-cms-shell-v5';
+const APP_SHELL = ['./', './data-directory.js', './manifest.webmanifest', './icons/app-icon.svg', './icons/cms-icon.svg'];
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(APP_SHELL)));
