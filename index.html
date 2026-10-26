@@ -156,7 +156,7 @@ function kpiCompare(label,current,previous,fmt){const diff=previous===0?(current
 /* Receipt/picture files live in IndexedDB (localStorage's ~5 MB quota overflowed); records keep a small "file:<id>" reference. */
 function fileStore(){return new Promise((res,rej)=>{const r=indexedDB.open('cms-files',1);r.onupgradeneeded=()=>r.result.createObjectStore('files');r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)})}
 /* Shared data: records are synced with a Google Apps Script web app (see apps-script/Code.gs) so everyone sees the same data. Paste the web app URL below to switch it on; while it is empty the site keeps data in this browser only. */
-var SYNC_URL='https://script.google.com/macros/s/AKfycbwdh9Dogk1jry72HDmBWWulSQC8Scr-x_5Og2PQdUdx3idMFHjduYBannSJ7CUeatMF/exec',SYNC_SNAP_KEY='cms-sync-snap-v1',SYNC_REV_KEY='cms-sync-rev-v1',SYNC_FILES_KEY='cms-sync-files-v1';
+var SYNC_URL='https://script.google.com/a/macros/shopee.com/s/AKfycbxRCWCquKjWGh16JbPsKIN17g1cY4Jx5OajwGibs170I2DkwLq-GZ0nQAGm-vN-3DZZ/exec',SYNC_SNAP_KEY='cms-sync-snap-v1',SYNC_REV_KEY='cms-sync-rev-v1',SYNC_FILES_KEY='cms-sync-files-v1';
 var syncBusy=false,syncAgain=false,syncTimer=null;
 function syncEnabled(){return !!SYNC_URL}
 function registerSignIn(){if(!syncEnabled()||!activeUser)return;syncRequest({action:'registerUser',name:activeUser.name,email:activeUser.email,warehouse:activeUser.warehouse}).catch(()=>{})}
